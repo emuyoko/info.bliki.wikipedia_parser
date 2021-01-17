@@ -80,6 +80,13 @@ public class WikipediaScanner {
 
             while (true) {
                 ch = fSource[fScannerPosition++];
+
+                // If any HTML tag is detected, skip it. (HTML comment is removed in advance.)
+                if (ch == '<') {
+                    parseTag(fScannerPosition);
+                    continue;
+                }
+
                 switch (ch) {
                 case '[':
                     int position = findNestedEndSingle(fSource, '[', ']', fScannerPosition);
