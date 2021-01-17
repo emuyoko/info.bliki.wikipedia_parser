@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import java.util.Locale;
 
+import static info.bliki.wiki.namespaces.INamespace.NamespaceCode.*;
+import static info.bliki.wiki.namespaces.INamespace.NamespaceCode.CITATIONS_NAMESPACE_KEY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -42,6 +44,9 @@ public class NamespaceTest {
         assertThat(namespace.getNamespace("Project")).isEqualTo(namespace.PROJECT);
         assertThat(namespace.getNamespace("Project_talk")).isEqualTo(namespace.PROJECT_TALK);
         assertThat(namespace.getNamespace("Project talk")).isEqualTo(namespace.PROJECT_TALK);
+        assertThat(namespace.getNamespace("Wiktionary")).isEqualTo(namespace.PROJECT);
+        assertThat(namespace.getNamespace("Wiktionary_talk")).isEqualTo(namespace.PROJECT_TALK);
+        assertThat(namespace.getNamespace("Wiktionary talk")).isEqualTo(namespace.PROJECT_TALK);
     }
 
     @Test public void testTalkspace001() {
@@ -51,6 +56,9 @@ public class NamespaceTest {
         assertThat(namespace.getTalkspace("Project")).isEqualTo(namespace.PROJECT_TALK);
         assertThat(namespace.getTalkspace("Project_talk")).isEqualTo(namespace.PROJECT_TALK);
         assertThat(namespace.getTalkspace("Project talk")).isEqualTo(namespace.PROJECT_TALK);
+        assertThat(namespace.getTalkspace("Wiktionary")).isEqualTo(namespace.PROJECT_TALK);
+        assertThat(namespace.getTalkspace("Wiktionary_talk")).isEqualTo(namespace.PROJECT_TALK);
+        assertThat(namespace.getTalkspace("Wiktionary talk")).isEqualTo(namespace.PROJECT_TALK);
     }
 
     @Test public void testContentspace001() {
@@ -60,6 +68,9 @@ public class NamespaceTest {
         assertThat(namespace.getContentspace("Project")).isEqualTo(namespace.PROJECT);
         assertThat(namespace.getContentspace("Project_talk")).isEqualTo(namespace.PROJECT);
         assertThat(namespace.getContentspace("Project talk")).isEqualTo(namespace.PROJECT);
+        assertThat(namespace.getContentspace("Wiktionary")).isEqualTo(namespace.PROJECT);
+        assertThat(namespace.getContentspace("Wiktionary_talk")).isEqualTo(namespace.PROJECT);
+        assertThat(namespace.getContentspace("Wiktionary talk")).isEqualTo(namespace.PROJECT);
     }
 
     @Test public void testOldAliases001() {
@@ -74,16 +85,31 @@ public class NamespaceTest {
         assertThat(namespace.getNamespace("Module_talk")).isEqualTo(namespace.MODULE_TALK);
     }
 
+    @Test public void testPortalNamespace() {
+        assertThat(namespace.getNamespace("Portal")).isEqualTo(namespace.PORTAL);
+        assertThat(namespace.getContentspace("Portal_talk")).isEqualTo(namespace.PORTAL);
+        assertThat(namespace.getNamespace("Portal_talk")).isEqualTo(namespace.PORTAL_TALK);
+        assertThat(namespace.getNamespace("Appendix")).isEqualTo(namespace.PORTAL);
+        assertThat(namespace.getContentspace("Appendix_talk")).isEqualTo(namespace.PORTAL);
+        assertThat(namespace.getNamespace("Appendix_talk")).isEqualTo(namespace.PORTAL_TALK);
+    }
+
     @Test public void testBookNamespace() {
         assertThat(namespace.getNamespace("Book")).isEqualTo(namespace.BOOK);
         assertThat(namespace.getContentspace("Book_talk")).isEqualTo(namespace.BOOK);
         assertThat(namespace.getNamespace("Book_talk")).isEqualTo(namespace.BOOK_TALK);
+        assertThat(namespace.getNamespace("Transwiki")).isEqualTo(namespace.BOOK);
+        assertThat(namespace.getContentspace("Transwiki_talk")).isEqualTo(namespace.BOOK);
+        assertThat(namespace.getNamespace("Transwiki_talk")).isEqualTo(namespace.BOOK_TALK);
     }
 
     @Test public void testDraftNamespace() {
         assertThat(namespace.getNamespace("Draft")).isEqualTo(namespace.DRAFT);
         assertThat(namespace.getContentspace("Draft_talk")).isEqualTo(namespace.DRAFT);
         assertThat(namespace.getNamespace("Draft_talk")).isEqualTo(namespace.DRAFT_TALK);
+        assertThat(namespace.getNamespace("Reconstruction")).isEqualTo(namespace.DRAFT);
+        assertThat(namespace.getContentspace("Reconstruction_talk")).isEqualTo(namespace.DRAFT);
+        assertThat(namespace.getNamespace("Reconstruction_talk")).isEqualTo(namespace.DRAFT_TALK);
     }
 
     @Test public void testEducationProgramNamespace() {
@@ -106,5 +132,53 @@ public class NamespaceTest {
         assertThat(namespace.PROJECT_TALK.getCanonicalName()).isEqualTo("Project_talk");
         assertThat(new Namespace(Locale.GERMAN).PROJECT_TALK.getCanonicalName()).isEqualTo("Project_talk");
         assertThat(new Namespace(Locale.FRENCH).PROJECT_TALK.getCanonicalName()).isEqualTo("Project_talk");
+    }
+
+    @Test public void testThreadNamespace() {
+        assertThat(namespace.getNamespace("Thread")).isEqualTo(namespace.THREAD);
+        assertThat(namespace.getContentspace("Thread_talk")).isEqualTo(namespace.THREAD);
+        assertThat(namespace.getNamespace("Thread_talk")).isEqualTo(namespace.THREAD_TALK);
+    }
+
+    @Test public void testSummaryNamespace() {
+        assertThat(namespace.getNamespace("Summary")).isEqualTo(namespace.SUMMARY);
+        assertThat(namespace.getContentspace("Summary_talk")).isEqualTo(namespace.SUMMARY);
+        assertThat(namespace.getNamespace("Summary_talk")).isEqualTo(namespace.SUMMARY_TALK);
+    }
+
+    @Test public void testConcordanceNamespace() {
+        assertThat(namespace.getNamespace("Concordance")).isEqualTo(namespace.CONCORDANCE);
+        assertThat(namespace.getContentspace("Concordance_talk")).isEqualTo(namespace.CONCORDANCE);
+        assertThat(namespace.getNamespace("Concordance_talk")).isEqualTo(namespace.CONCORDANCE_TALK);
+    }
+
+    @Test public void testIndexNamespace() {
+        assertThat(namespace.getNamespace("Index")).isEqualTo(namespace.INDEX);
+        assertThat(namespace.getContentspace("Index_talk")).isEqualTo(namespace.INDEX);
+        assertThat(namespace.getNamespace("Index_talk")).isEqualTo(namespace.INDEX_TALK);
+    }
+
+    @Test public void testRhymesNamespace() {
+        assertThat(namespace.getNamespace("Rhymes")).isEqualTo(namespace.RHYMES);
+        assertThat(namespace.getContentspace("Rhymes_talk")).isEqualTo(namespace.RHYMES);
+        assertThat(namespace.getNamespace("Rhymes_talk")).isEqualTo(namespace.RHYMES_TALK);
+    }
+
+    @Test public void testThesaurusNamespace() {
+        assertThat(namespace.getNamespace("Thesaurus")).isEqualTo(namespace.THESAURUS);
+        assertThat(namespace.getContentspace("Thesaurus_talk")).isEqualTo(namespace.THESAURUS);
+        assertThat(namespace.getNamespace("Thesaurus_talk")).isEqualTo(namespace.THESAURUS_TALK);
+    }
+
+    @Test public void testCitationsNamespace() {
+        assertThat(namespace.getNamespace("Citations")).isEqualTo(namespace.CITATIONS);
+        assertThat(namespace.getContentspace("Citations_talk")).isEqualTo(namespace.CITATIONS);
+        assertThat(namespace.getNamespace("Citations_talk")).isEqualTo(namespace.CITATIONS_TALK);
+    }
+
+    @Test public void testSignGlossNamespace() {
+        assertThat(namespace.getNamespace("Sign_gloss")).isEqualTo(namespace.SIGN_GLOSS);
+        assertThat(namespace.getContentspace("Sign_gloss_talk")).isEqualTo(namespace.SIGN_GLOSS);
+        assertThat(namespace.getNamespace("Sign_gloss_talk")).isEqualTo(namespace.SIGN_GLOSS_TALK);
     }
 }

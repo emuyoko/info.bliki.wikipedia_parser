@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
  * @see <a href="https://www.mediawiki.org/wiki/Manual:Namespace#Built-in_namespaces">Mediawiki - Manual:Namespace</a>
  * @see <a href="https://www.mediawiki.org/wiki/Extension_default_namespaces">Extension default namespaces</a>
  * @see <a href="https://github.com/wikimedia/mediawiki-core/blob/master/includes/Defines.php">Defines.php</a>
+ * @see <a href="https://en.wiktionary.org/wiki/Wiktionary:Namespace">Wiktionary namespaces</a>
  *
  */
 public interface INamespace {
@@ -53,11 +54,14 @@ public interface INamespace {
         /**
          * Information about the wiki. Prefix is the same as $wgSitename of the PHP
          * installation.
+         *
+         * Also means Wiktionary's "Wiktionary" namespace.
          */
         PROJECT_NAMESPACE_KEY(4),
 
         /**
          *
+         * Also means Wiktionary's "Wiktionary talk" namespace.
          */
         PROJECT_TALK_NAMESPACE_KEY(5),
 
@@ -108,18 +112,82 @@ public interface INamespace {
         CATEGORY_TALK_NAMESPACE_KEY(15),
 
         /**
+         * Wiktionary's "Thread".
+         */
+        THREAD_NAMESPACE_KEY(90),
+        /**
+         * Wiktionary's "Thread talk".
+         */
+        THREAD_TALK_NAMESPACE_KEY(91),
+
+        /**
+         * Wiktionary's "Summary".
+         */
+        SUMMARY_NAMESPACE_KEY(92),
+        /**
+         * Wiktionary's "Summary talk".
+         */
+        SUMMARY_TALK_NAMESPACE_KEY(93),
+
+        /**
          * Portal pages.
+         *
+         * Also means Wiktionary's "Appendix" namespace.
          */
         PORTAL_NAMESPACE_KEY(100),
 
         /**
          * Talk pages for portal pages.
+         *
+         * Also means Wiktionary's "Appendix talk" namespace.
          */
         PORTAL_TALK_NAMESPACE_KEY(101),
 
+        /**
+         * Wiktionary's "Concordance".
+         */
+        CONCORDANCE_NAMESPACE_KEY(102),
+        CONCORDANCE_TALK_NAMESPACE_KEY(103),
+
+        /**
+         * Wiktionary's "Index".
+         */
+        INDEX_NAMESPACE_KEY(104),
+        INDEX_TALK_NAMESPACE_KEY(105),
+
+        /**
+         * Wiktionary's "Rhymes".
+         */
+        RHYMES_NAMESPACE_KEY(106),
+        RHYMES_TALK_NAMESPACE_KEY(107),
+
+        /**
+         * also means Wiktionary's "Transwiki" namespace.
+         */
         BOOK_NAMESPACE_KEY(108),
         BOOK_TALK_NAMESPACE_KEY(109),
 
+        /**
+         * Wiktionary's "Thesaurus".
+         */
+        THESAURUS_NAMESPACE_KEY(110),
+        THESAURUS_TALK_NAMESPACE_KEY(111),
+
+        /**
+         * Wiktionary's "Citations".
+         */
+        CITATIONS_NAMESPACE_KEY(114),
+        CITATIONS_TALK_NAMESPACE_KEY(115),
+
+        /**
+         * Wiktionary's "Sign gloss".
+         */
+        SIGN_GLOSS_NAMESPACE_KEY(116),
+        SIGN_GLOSS_TALK_NAMESPACE_KEY(117),
+
+        /**
+         * also means Wiktionary's "Reconstruction" namespace.
+         */
         DRAFT_NAMESPACE_KEY(118),
         DRAFT_TALK_NAMESPACE_KEY(119),
 
