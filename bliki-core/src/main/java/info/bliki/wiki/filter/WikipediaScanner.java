@@ -81,10 +81,18 @@ public class WikipediaScanner {
             while (true) {
                 ch = fSource[fScannerPosition++];
 
-                // If any HTML tag is detected, skip it. (HTML comment is removed in advance.)
+                // If any HTML tag is detected, preserves it and skips.
+                // (HTML comments don't need to be considered because they are removed in advance.)
                 if (ch == '<') {
-                    parseTag(fScannerPosition);
-                    continue;
+                    WikiTagNode tag = parseTag(fScannerPosition);
+                    if (tag != null) {
+                        if (cell == null) {
+                            cell = new WPCell(tag.getTagBegin() - 1);
+                            cell.setType(WPCell.UNDEFINED);
+                            cells.add(cell);
+                        }
+                        continue;
+                    }
                 }
 
                 switch (ch) {
@@ -160,11 +168,6 @@ public class WikipediaScanner {
                         cell = new WPCell(fScannerPosition - 1);
                         cell.setType(WPCell.TH);
                         cells.add(cell);
-
-                        // If the next character is "\n", the parser should restart at "\n".
-                        if (ch == '\n') {
-                            fScannerPosition--;
-                        }
 
                         break;
                     case '{': // "\n {"
