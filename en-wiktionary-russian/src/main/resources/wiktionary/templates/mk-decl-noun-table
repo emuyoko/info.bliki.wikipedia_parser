@@ -1,0 +1,36 @@
+<div class="NavFrame" style="width: 45em">
+<div class="NavHead" style="background:#d9ebff; text-align: left">Declension of {{m|mk||{{PAGENAME}}|tr=-}}</div>
+<div class="NavContent">
+{| style="background:#F9F9F9; text-align:center; width:100%" class="inflection-table"
+|-
+! style="background:#d9ebff;width:32%" | 
+! style="background:#d9ebff;width:34%" | singular
+! style="background:#d9ebff;width:34%" | plural
+|-
+! style="background:#eff7ff" | indefinite
+| {{#if:{{{ind_sg|}}}|{{l-self|mk|{{{ind_sg}}}|tr=-}}|&mdash;}}
+| {{#if:{{{ind_pl|}}}|{{l-self|mk|{{{ind_pl}}}|tr=-}}|&mdash;}}
+|-
+! style="background:#eff7ff" | definite&nbsp;unspecified
+| {{#if:{{{def_unsp_sg|}}}|{{l-self|mk|{{{def_unsp_sg}}}|tr=-}}|&mdash;}}
+| {{#if:{{{def_unsp_pl|}}}|{{l-self|mk|{{{def_unsp_pl}}}|tr=-}}|&mdash;}}
+|-
+! style="background:#eff7ff" | definite&nbsp;proximal
+| {{#if:{{{def_prox_sg|}}}|{{l-self|mk|{{{def_prox_sg}}}|tr=-}}|&mdash;}}
+| {{#if:{{{def_prox_pl|}}}|{{l-self|mk|{{{def_prox_pl}}}|tr=-}}|&mdash;}}
+|-
+! style="background:#eff7ff" | definite&nbsp;distal
+| {{#if:{{{def_dist_sg|}}}|{{l-self|mk|{{{def_dist_sg}}}|tr=-}}|&mdash;}}
+| {{#if:{{{def_dist_pl|}}}|{{l-self|mk|{{{def_dist_pl}}}|tr=-}}|&mdash;}}
+|-
+! style="background:#eff7ff" | vocative
+| {{#if:{{{voc_sg|}}}|{{l-self|mk|{{{voc_sg}}}|tr=-}}{{#if:{{{voc_sg2|}}}|, {{l-self|mk|{{{voc_sg2}}}|tr=-}}}}|&mdash;}}
+| {{#if:{{{voc_pl|}}}|{{l-self|mk|{{{voc_pl}}}|tr=-}}|&mdash;}}
+{{#if:{{{count|}}}|{{!}}-
+! style="background:#eff7ff" {{!}} count&nbsp;form
+{{!}} &mdash;
+{{!}} {{l-self|mk|{{{count}}}|tr=-}}
+}}
+|}</div></div><!--
+
+--><noinclude>{{documentation}}</noinclude>

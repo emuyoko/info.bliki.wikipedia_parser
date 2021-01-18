@@ -60,6 +60,7 @@
         <module>bliki-core</module>
         <module>bliki-creator</module>
         <module>bliki-addons</module>
+        <module>en-wiktionary-russian</module>
     </modules>
 
     <properties>

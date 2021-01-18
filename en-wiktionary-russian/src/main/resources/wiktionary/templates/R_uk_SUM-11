@@ -1,0 +1,13 @@
+[http://sum.in.ua/?swrd={{{1|{{PAGENAME}}}}} {{lang|uk|{{{1|{{PAGENAME}}}}}}}] in <!--
+-->{{cite-book<!--
+-->|authorlink=<!--
+-->|editor=[[w:uk:Білодід Іван Костянтинович|{{xlit|uk|Білодід, І. К.}}]]<!--
+-->|title={{xlit|uk|Словник української мови}}<!--
+-->|location=Kiev<!--
+-->|publisher=Naukova Dumka<!--
+-->|year={{#switch:{{{vol}}}|1|01|I=1970|2|02|II=1971|3|03|III=1972|4|04|IV=1973|5|05|V=1974|6|06|VI=1975|7|07|VII=1976|8|08|VIII=1977|9|09|IX=1978|10|X=1979|11|XI=1980|#default=1970–1980}}<!--
+-->|page={{{page|}}}<!--
+-->|pages={{{pages|}}}<!--
+-->|volume={{{vol|}}}<!--
+-->|passage={{{passage|}}}<!--
+-->}}<noinclude>{{documentation}}</noinclude>

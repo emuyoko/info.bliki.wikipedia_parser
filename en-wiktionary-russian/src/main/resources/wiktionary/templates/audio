@@ -1,0 +1,49 @@
+{{check deprecated lang param usage|lang={{{lang|}}}|1=<!--
+
+--><templatestyles src="audio/styles.css" /><!--
+--><table class="audiotable" style="vertical-align: bottom; display:inline-block; list-style:none;line-height: 1em; border-collapse:collapse;"><!--
+--><tr><!--
+
+-->{{#ifeq:{{{format|}}}|1<!--
+-->|<!--
+  Do nothing
+-->|<!--
+  -->{{#if:{{#if:{{{lang|}}}|{{{2|}}}|{{{3|}}}}}<!--
+  -->|<td class="unicode audiolink" style="padding-right:5px; padding-left: 0;">{{#if:{{{lang|}}}|{{{2|<noinclude>{{{2}}}</noinclude>}}}|{{{3|<noinclude>{{{3}}}</noinclude>}}}}}</td><!--
+  -->}}<!--
+-->}}<!--
+
+--><td class="audiofile"><!--
+-->[[File:{{#if:{{{lang|}}}|{{{1|<noinclude>Example.ogg</noinclude>}}}|{{{2|<noinclude>Example.ogg</noinclude>}}}}}|noicon|175px]]<!--
+--></td><!--
+
+--><td class="audiometa" style="font-size: 80%;"><!--
+-->([[:File:{{#if:{{{lang|}}}|{{{1|<noinclude>Example.ogg</noinclude>}}}|{{{2|<noinclude>Example.ogg</noinclude>}}}}}|file]])<!--
+--></td><!--
+
+--></tr><!--
+
+-->{{#ifeq:{{{format|}}}|1<!--
+-->|<!--
+  --><tr><!--
+  --><td style="font-size: 90%; width: 25%;">{{#if:{{{lang|}}}|{{#if:{{{2|}}}|{{{2}}}}}|{{#if:{{{3|}}}|{{{3}}}}}}}</td><!--
+  --></tr><!--
+-->}}<!--
+
+--></table><!--
+
+-->}}<!-- (end of {{check deprecated lang param usage}})
+
+--><includeonly><!--
+-->{{#if:{{#if:{{{lang|}}}|{{{lang|}}}|{{{1|}}}}}||{{#invoke:debug|error|Missing language code.}}}}<!--
+-->{{#ifeq:{{{format|}}}|1<!--
+-->|<!--
+  Do nothing
+-->|<!--
+  -->{{#ifeq:{{NAMESPACE}}||<!--
+    -->{{catlangname|{{#if:{{{lang|}}}|{{{lang|}}}|{{{1|}}}}}|terms with audio links}}<!--
+  -->}}<!--
+-->}}<!--
+--></includeonly><!--
+
+--><noinclude>{{documentation}}</noinclude>

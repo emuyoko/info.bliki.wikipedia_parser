@@ -1,0 +1,7 @@
+{{#invoke:etymology/templates|borrowed}}<!--
+
+--><includeonly><!--
+-->{{#if:{{{withtext|}}}|[[Category:bor with withtext]]}}<!--
+--></includeonly><!--
+
+--><noinclude>{{documentation}}</noinclude>

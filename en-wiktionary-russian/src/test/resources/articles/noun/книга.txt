@@ -1,0 +1,139 @@
+{{also|кніга|књига|кънига}}
+==Bulgarian==
+
+===Etymology===
+From {{inh|bg|sla-pro|*kъňiga}}.
+
+===Pronunciation===
+* {{bg-IPA|кни́га}}
+
+===Noun===
+{{bg-noun|кни́га|f|adj=кни́жен|dim=кни́жка|dim2=книжле́}}
+
+# [[book]]
+# [[register]]
+# {{lb|bg|dated}} a piece of [[paper]]
+# [[letter]], written [[message]]
+
+====Declension====
+{{bg-ndecl|кни́га<(v)>}}
+
+====Synonyms====
+* {{sense|paper}} {{l|bg|харти́я}}
+* {{sense|letter}} {{l|bg|писмо́}}
+
+===References===
+* {{R:bg:RBE}}
+* {{R:bg:RBE2}}
+
+{{C|bg|Books|Paper}}
+
+----
+
+==Chechen==
+
+===Etymology===
+
+From {{bor|ce|ru|кни́га}}.
+
+===Noun===
+
+{{ce-noun|pl=книгаш}}
+
+# [[book]]
+
+----
+
+==Macedonian==
+
+===Etymology===
+From {{inh|mk|sla-pro|*kъňiga}}.
+
+===Pronunciation===
+* {{mk-IPA}}
+
+===Noun===
+{{mk-noun|f|книги}}
+
+# [[book]]
+# {{lb|mk|archaic}} a piece of [[paper]]
+
+====Declension====
+{{mk-decl-noun-f|книг}}
+
+[[Category:mk:Books]]
+[[Category:mk:Paper]]
+
+----
+
+==Russian==
+
+===Etymology===
+From {{inh|ru|sla-pro|*kъňiga}}.
+
+===Pronunciation===
+* {{ru-IPA|кни́га}}
+* {{audio|ru|Ru-{{PAGENAME}}.ogg|Audio}}
+
+===Noun===
+{{ru-noun+|кни́га|adj=кни́жный|dim=кни́жка|dim2=кни́жечка|dim3=кни́жица}}
+
+# [[book]]
+#: {{uxi|ru|Он преподнёс ей '''кни́гу'''.|He presented '''a book''' to her. / He presented her with '''a book'''.}}
+
+====Declension====
+{{ru-noun-table|кни́га}}
+{{ru-noun-table|old=1|кни́га}}
+
+====Derived terms====
+* {{l|ru|кни́га за семью́ печа́тями}} — [[closed book]], [[enigma]], [[mystery]]
+* {{l|ru|конто́рская кни́га|g=f}}
+* {{l|ru|счётная кни́га|g=f}}
+
+====Related terms====
+{{top2}}
+''Adjectives''
+{{mid2}}
+''Nouns''
+* {{l|ru|книгове́дение|g=n}}
+* {{l|ru|книгодержа́тель|g=m}}
+* {{l|ru|книгоизда́тель|g=m}}
+* {{l|ru|книгоно́ша|g=m}}
+* {{l|ru|книготорго́вля|g=f}}
+* {{l|ru|книгохрани́лище|g=n}}
+* {{l|ru|книгоче́й|g=m}}
+{{bottom}}
+
+====Descendants====
+* {{desc|evn|книга|bor=1}}
+* {{desc|kjh|книга|bor=1}}
+* {{desc|sjd|кнӣга|bor=1}}
+* {{desc|pl|kniga|bor=1}}
+* {{desc|sah|кинигэ|bor=1}}
+
+{{topics|ru|Books}}
+
+----
+
+==Ukrainian==
+
+===Etymology===
+From {{inh|uk|sla-pro|*kъňiga}}.
+
+===Pronunciation===
+* {{uk-IPA|кни́га}}
+* {{audio|ru|Uk-{{PAGENAME}}.ogg|Audio}}
+
+===Noun===
+{{uk-noun|кни́га<>|adj=кни́жний|dim=кни́жка}}
+
+# [[book]]
+
+====Declension====
+{{uk-ndecl|кни́га<>}}
+
+===References===
+* {{R:uk:SUM-11}}
+* {{R:uk:Horokh}}
+
+{{topics|uk|Books}}

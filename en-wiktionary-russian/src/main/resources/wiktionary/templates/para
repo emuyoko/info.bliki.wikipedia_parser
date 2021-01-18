@@ -1,0 +1,8 @@
+<code>&#124;{{#if:{{{}}}|{{#if:{{{1<includeonly>|</includeonly>}}}|{{{1}}}=}}{{{2<includeonly>|</includeonly>}}}|={{{1|}}}}}</code><!--
+
+-->{{#if:{{{3|}}}<!--
+-->|&nbsp;({{#if:{{{req|}}}|'''''required''''',&nbsp;}}{{#if:{{{opt|}}}|''optional'',&nbsp;}}{{{3}}})<!--
+-->|{{#if:{{{req|}}}|&nbsp;('''''required''''')}}{{#if:{{{opt|}}}|&nbsp;(''optional'')}}<!--
+-->}}<!--
+
+--><noinclude>{{documentation}}</noinclude>

@@ -1,0 +1,4 @@
+/* Work-around for [[phab:T25965]] (Kaltura advertisement) */
+.k-player .k-attribution {
+	visibility: hidden;
+}

@@ -1,0 +1,325 @@
+<includeonly>{{#if:{{{author|}}}{{{last|}}}
+  | {{#if:{{{authorlink|}}}
+      | [[w:{{{authorlink}}}|{{#if:{{{author|}}}
+          | {{{author}}}
+          | {{#if:{{{last|}}}
+              | {{{last}}}{{#if:{{{first|}}}|, {{{first}}}}}
+            }}
+        }}]]
+      | {{#if:{{{author|}}}
+          | {{{author}}}
+          | {{#if:{{{last|}}}
+              | {{{last}}}{{#if:{{{first|}}}|, {{{first}}}}}
+            }}
+        }}
+    }}{{#if:{{{author2|}}}{{{last2|}}}
+      | {{#if:{{{authorlink2|}}}
+          |&#59;<!--semicolon--> [[w:{{{authorlink2}}}|{{#if:{{{author2|}}}
+              | {{{author2}}}
+              | {{#if:{{{last2|}}}
+                  | {{{last2}}}{{#if:{{{first2|}}}|, {{{first2}}}}}
+                }}
+            }}]]
+          |&#59; {{#if:{{{author2|}}}
+              | {{{author2}}}
+              | {{#if:{{{last2|}}}
+                  | {{{last2}}}{{#if:{{{first2|}}}|, {{{first2}}}}}
+                }}
+            }}
+        }}
+    }}{{#if:{{{author3|}}}{{{last3|}}}
+      | {{#if:{{{authorlink3|}}}
+          |&#59;<!--semicolon--> [[w:{{{authorlink3}}}|{{#if:{{{author3|}}}
+              | {{{author3}}}
+              | {{#if:{{{last3|}}}
+                  | {{{last3}}}{{#if:{{{first3|}}}|, {{{first3}}}}}
+                }}
+            }}]]
+          |&#59; {{#if:{{{author3|}}}
+              | {{{author3}}}
+              | {{#if:{{{last3|}}}
+                  | {{{last3}}}{{#if:{{{first3|}}}|, {{{first3}}}}}
+                }}
+            }}
+        }}
+    }}{{#if:{{{author4|}}}{{{last4|}}}
+      | {{#if:{{{authorlink4|}}}
+          |&#59;<!--semicolon--> [[w:{{{authorlink4}}}|{{#if:{{{author4|}}}
+              | {{{author4}}}
+              | {{#if:{{{last4|}}}
+                  | {{{last4}}}{{#if:{{{first4|}}}|, {{{first4}}}}}
+                }}
+            }}]]
+          |&#59; {{#if:{{{author4|}}}
+              | {{{author4}}}
+              | {{#if:{{{last4|}}}
+                  | {{{last4}}}{{#if:{{{first4|}}}|, {{{first4}}}}}
+                }}
+            }}
+        }}
+    }}{{#if:{{{author5|}}}{{{last5|}}}
+      | {{#if:{{{authorlink5|}}}
+          |&#59;<!--semicolon--> [[w:{{{authorlink5}}}|{{#if:{{{author5|}}}
+              | {{{author5}}}
+              | {{#if:{{{last5|}}}
+                  | {{{last5}}}{{#if:{{{first5|}}}|, {{{first5}}}}}
+                }}
+            }}]]
+          |&#59; {{#if:{{{author5|}}}
+              | {{{author5}}}
+              | {{#if:{{{last5|}}}
+                  | {{{last5}}}{{#if:{{{first5|}}}|, {{{first5}}}}}
+                }}
+            }}
+        }}
+    }}{{#if:{{{coauthors|}}}
+        | &#59; {{{coauthors}}}&#32;
+        | &#32;
+      }}
+  | {{#if:{{{translator|}}}<!--If editor and/or translator stated without author, display them here.-->
+      | {{{translator|}}}, transl.{{#if:{{{editor|}}}{{{editors|}}}|&#59;&#32;|,}}
+}}{{#if:{{{editor|}}}
+      | {{{editor}}}, editor&#32;
+      | {{#if:{{{editors|}}}
+          | {{{editors}}}, editors&#32;
+        }}
+    }}
+}}{{#if:{{{author|}}}{{{last|}}}{{{editor|}}}{{{editors|}}}{{{translator|}}}<!--Only display quotee and date here if these parameters present. Otherwise, display date after publisher's name.-->
+  | {{#if:{{{quotee|}}}
+      |, quoting {{{quotee|}}}&#32;
+    }}({{#if:{{{year|}}}
+       | {{#if:{{{month|}}}
+           | {{{month}}} {{{year}}}
+           | {{#switch:{{padleft:|2|{{{year}}}}}
+               | a. = ''[[Appendix:Glossary#a.|a.]]'' {{#invoke:string|sub|{{{year}}}|4}}
+               | c. = ''[[Appendix:Glossary#c.|c.]]'' {{#invoke:string|sub|{{{year}}}|4}}
+               | p. = ''[[Appendix:Glossary#p.|p.]]'' {{#invoke:string|sub|{{{year}}}|4}}
+               | {{{year}}}
+             }}
+         }}
+       | {{#if:{{{date|}}}
+           | {{#formatdate:{{{date}}}}}
+           | {{#if:{{{accessdate|{{{access-date|}}}}}}
+               | accessed {{#formatdate:{{{accessdate|{{{access-date}}}}}}}}<!--Use accessdate as a backstop if year or date not specified.-->
+               | <!-- using und is a hack but avoids the need to pass a lang to all cite-* templates -->{{rfdate|und<noinclude>|nocat=true</noinclude>}}
+             }}
+         }}
+    }})&#32;
+}}{{#if:{{{author|}}}{{{last|}}}{{{editor|}}}{{{editors|}}}{{{translator|}}}
+  | {{#if:{{{accessdate|{{{access-date|}}}}}}{{{date|}}}{{{year|}}}
+      | {{#if:{{{chapter|}}}{{{entry|}}}
+          |,&#32;<!--Add a comma before chapter or entry if author or editor specified together with date or year. Otherwise, do nothing. (If chapter or entry, and date or year, are specified but author or editor not specified, date or year is relocated after the publisher's name.)-->
+        }}
+    }}
+}}{{#if:{{{entry|}}}
+  | {{#invoke:italics|unitalicize_brackets|{{#if:{{{entryurl|}}}
+      | “[{{{entryurl}}} {{{entry}}}]
+      | {{#if:{{{url|}}}
+          | “[{{{url}}} {{{entry}}}]
+          | “{{{entry}}}
+        }}
+    }}}}{{#if:{{{trans-chapter|}}}
+      |&#32;&#91;{{#invoke:italics|unitalicize_brackets|{{{trans-chapter}}}}}&#93;”
+      |”
+    }}{{#if:{{{notitle|}}}||, in&#32;}}
+  | {{#if:{{{chapter|}}}
+      | {{#if:{{num|{{{chapter}}}}}<!--Arabic chapter number?-->
+          |&#32;chapter {{#if:{{{chapterurl|}}}
+              | [{{{chapterurl}}} {{{chapter}}}]
+              | {{{chapter}}}
+            }}
+          | {{#if:{{R2A|{{{chapter}}}|no_error=1}}<!--Roman chapter number?-->
+              |&#32;chapter {{#if:{{{chapterurl|}}}
+                  | [{{{chapterurl}}} {{uc:{{{chapter}}}}}]
+                  | {{uc:{{{chapter}}}}}
+                }}
+              |&#32;“{{#invoke:italics|unitalicize_brackets|{{#if:{{{chapterurl|}}}<!--Must be a chapter name-->
+                  | [{{{chapterurl}}} {{{chapter}}}]
+                  | {{{chapter}}}
+                }}}}{{#if:{{{trans-chapter|}}}
+                |&#32;&#91;{{#invoke:italics|unitalicize_brackets|{{{trans-chapter}}}}}&#93;
+                }}”
+            }}
+        }}{{#if:{{{notitle|}}}||, in&#32;}}
+    }}
+}}{{#if:{{{author|}}}{{{last|}}}<!--Only display editor here if author also provided. If author not provided, do nothing – editor is displayed before date.-->
+  | {{#if:{{{translator|}}}
+      | {{{translator|}}}, transl.{{#if:{{{editor|}}}{{{editors|}}}|&#59;|,}}&#32;
+    }}{{#if:{{{editor|}}}{{{editors|}}}
+      | {{#if:{{{chapter|}}}{{{entry|}}}|<!--Do nothing.-->|,&#32;}}{{#if:{{{editor|}}}
+          | {{{editor}}}, editor,&#32;
+          | {{#if:{{{editors|}}}
+              | {{{editors}}}, editors,&#32;
+            }}
+        }}
+    }}
+}}{{#if:{{{chapter|}}}{{{entry|}}}|<!--Do nothing.-->|&#32;<!--If these parameters are not used, add a space.-->}}{{#if:{{{title|}}}
+  |<cite>{{#invoke:italics|unitalicize_brackets|{{{title}}}}}</cite>
+  | {{#if:{{{notitle|}}}
+      |<!--Do nothing.-->
+      | {{maintenance line|Please provide the title of the work}}
+    }}
+}}{{#if:{{{trans-title|}}}
+  | &#32;&#91;<cite>{{#invoke:italics|unitalicize_brackets|{{{trans-title}}}}}</cite>&#93;
+}}{{#if:{{{type|}}}
+  | &#32;&#40;{{{type|}}}&#41;
+}}{{#if:{{{series|}}}
+  | &#32;({{{series}}}{{#if:{{{seriesvolume|}}}|&#59; {{{seriesvolume}}}}})
+}}{{#if:{{{url|}}}
+  | {{#if:{{{entry|}}}
+      | {{#if:{{{entryurl|}}}<!--If {{{entryurl}} exists, then {{{url}} was not linked to {{{entry}}} and should be displayed here-->
+          | {{#if:{{{archiveurl|}}}
+              | &lrm;<!--Left-to-right mark to manage right-to-left languages--><sup>[{{{archiveurl}}}]</sup>
+              | &lrm;<sup>[{{{url}}}]</sup>
+            }}
+        }}
+      | {{#if:{{{archiveurl|}}}<!--If {{{entry}}} doesn't exist but {{{url}}} is specified, display it-->
+          | &lrm;<!--Left-to-right mark to manage right-to-left languages--><sup>[{{{archiveurl}}}]</sup>
+          | &lrm;<sup>[{{{url}}}]</sup>
+        }}
+    }}
+}}{{#if:{{{format|}}}{{{genre|}}}
+  | {{#if:{{{lang|}}}{{{worklang|}}}
+      | &#32;({{#if:{{{format|}}}
+          | {{{format}}}
+          | {{#if:{{{genre|}}}
+              | {{{genre}}}
+            }}
+        }}, in {{#invoke:languages/templates|getCanonicalName|{{{lang|{{{worklang|}}}}}}|return_if_invalid=1}})
+      | &#32;({{#if:{{{format|}}}
+          | {{{format}}}
+          | {{#if:{{{genre|}}}
+              | {{{genre}}}
+            }}
+        }})
+    }}
+  | {{#if:{{{lang|}}}{{{worklang|}}}
+      | &#32;(in {{#invoke:languages/templates|getCanonicalName|{{{lang|{{{worklang|}}}}}}|return_if_invalid=1}})
+    }}
+}}{{#if:{{{version|}}}
+  |, {{{version}}}
+}}{{#if:{{{volume|}}}
+  |, volume {{{volume}}}
+}}{{#if:{{{issue|}}}
+  |, issue {{{issue}}}
+}}{{#if:{{{others|}}}
+  |, {{{others}}}
+}}{{#if:{{{edition|}}}
+  |, {{{edition}}} edition
+}}{{#if:{{{publisher|}}}
+  | {{#if:{{{location|}}}
+      |, {{{location}}}&#58;<!--colon-->
+      |,
+    }} {{{publisher}}}
+  | {{#if:{{{location|}}}
+      |, {{{location}}}
+    }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  |<!--Do nothing if present.-->
+  | {{#if:{{{editor|}}}{{{editors|}}}{{{translator|}}}
+      |<!--Do nothing if present.-->
+      |, {{#if:{{{year|}}}<!--If author, editor and translator all absent, display date here.-->
+           | {{#if:{{{month|}}}
+               | {{{month}}} {{{year}}}
+               | {{{year}}}
+             }}
+           | {{#if:{{{date|}}}
+               | {{#formatdate:{{{date}}}}}
+               | {{#if:{{{accessdate|{{{access-date|}}}}}}
+                   | accessed {{#formatdate:{{{accessdate|{{{access-date}}}}}}}}<!--Use accessdate as a backstop if year or date not specified.-->
+                   | {{maintenance line|Please provide a date or year}}
+                 }}
+             }}
+         }}
+    }}
+}}{{#if:{{{year_published|}}}
+  |, published {{{year_published}}}
+}}{{#if:{{{bibcode|}}}
+  |, <small>[[w:Bibcode|Bibcode]]:&nbsp;[http://adsabs.harvard.edu/abs/{{urlencode:{{{bibcode}}}}} {{{bibcode}}}]</small>
+}}{{#if:{{{doi|}}}
+  |, <small>[[w:Digital object identifier|DOI]]:{{#if:{{{doi_brokendate|}}} 
+     | {{#tag:nowiki|{{{doi}}}}} (inactive [[{{{doi_brokendate}}}]]){{#ifeq:{{NAMESPACE}}|{{ns:0}}|[[Category:Pages with DOIs broken since {{#time:Y|{{{doi_brokendate}}} }}]]}}
+     | <span class="neverexpand">[https://doi.org/{{urlencode:{{{doi}}}}} {{#tag:nowiki|{{{doi}}}}}]</span>
+   }}</small>
+}}{{#if:{{{isbn|}}}
+  |, <small>{{ISBN|{{{isbn}}}}}</small>
+}}{{#if:{{{issn|}}}
+  |, <small>{{ISSN|{{{issn}}}}}</small>
+}}{{#if:{{{jstor|}}} 
+  |, <small>[[w:JSTOR|JSTOR]] [http://www.jstor.org/stable/{{urlencode:{{{jstor}}}}} {{{jstor}}}]</small>
+}}{{#if:{{{lccn|}}} 
+  |, <small>[[w:Library of Congress Control Number|LCCN]] [http://lccn.loc.gov/{{urlencode:{{{lccn}}}}} {{{lccn}}}]</small>
+}}{{#if:{{{oclc|}}} 
+  |, <small>[[w:OCLC|OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]</small>
+}}{{#if:{{{pmid|}}}
+  |, <small>[[w:PubMed Identifier|PMID]] [http://www.ncbi.nlm.nih.gov/pubmed/{{urlencode:{{{pmid}}}}} {{{pmid}}}]</small>
+}}{{#if:{{{ssrn|}}}
+  |, <small>[[w:Social Science Research Network|SSRN]] [http://ssrn.com/abstract={{urlencode:{{{ssrn}}}}} {{{ssrn}}}]</small>
+}}{{#if:{{{id|}}}
+  |, <small>{{{id}}}</small>
+}}{{#if:{{{archiveurl|}}}
+  |, archived from [{{{url}}} the original] on {{#formatdate:{{{archivedate}}}}}
+}}{{#if:{{{accessdate|{{{access-date|}}}}}}
+  | {{#if:{{{date|}}}{{{year|}}}<!--Only display accessdate if either date or year is specified, as accessdate is already used earlier in place of these parameters if they are missing.-->
+      |, retrieved {{#formatdate:{{{accessdate|{{{access-date}}}}}}}}
+    }}
+}}{{#if:{{{section|}}}
+  |, {{#if:{{{sectionurl|}}}
+       | [{{{sectionurl}}} {{{section}}}]
+       | {{{section}}}
+     }}
+}}{{#if:{{{pages|}}}
+  | {{#if:{{{page|}}}
+      |, {{#if:{{{pageurl|}}}
+           | [{{{pageurl}}} page {{{page}}}]
+           | page {{{page}}}
+         }}&#32;of {{{pages}}}
+      |, {{#if:{{{pageurl|}}}
+           | [{{{pageurl}}} pages {{{pages}}}]
+           | pages {{{pages}}}
+         }}
+    }}
+  | {{#if:{{{page|}}}
+      |, {{#if:{{{pageurl|}}}
+           | [{{{pageurl}}} page {{{page}}}]
+           | page {{{page}}}
+         }}
+    }}
+}}{{#if:{{{column|}}}{{{columns|}}}
+  |, {{#if:{{{columnurl|}}}
+      | [{{{columnurl}}} {{#if:{{{columns|}}}
+           | columns {{{columns}}}
+           | column {{{column}}}
+        }}]
+      | {{#if:{{{columns|}}}
+           | columns {{{columns}}}
+           | column {{{column}}}
+        }}
+    }}
+}}{{#if:{{{passage_block|}}}
+  | {{#ifeq:{{{passage_block|}}}|no
+      | {{#if:{{{passage|}}}
+          |&#58; “{{{passage}}}{{#if:{{{translation|}}}
+              |&#32;[{{{translation}}}]
+            }}”
+        }}
+      |&#58;<!--colon--><dl><dd>{{{passage_block}}}{{#if:{{{translation|}}}
+          |<dl><dd>{{{translation}}}</dd></dl>
+        }}</dd></dl>
+    }}
+  | {{#if:{{{passage|}}}
+      | {{#ifexpr:{{#invoke:string|len|{{{passage}}}}}>300
+          |&#58;<dl><dd>{{{passage}}}{{#if:{{{translation|}}}
+              |<dl><dd>{{{translation}}}</dd></dl>
+           }}</dd></dl>
+          |&#58; “{{{passage}}}{{#if:{{{translation|}}}
+              |&#32;[{{{translation}}}]
+            }}”
+        }}
+    }}
+}}{{#if:{{{archiveurl|}}}
+  | {{#if:{{{archivedate|}}}
+      |<!--Do nothing-->
+      | [[Category:Quotations using archiveurl without archivedate]]
+    }}
+}}</includeonly><noinclude>{{documentation}}</noinclude>
