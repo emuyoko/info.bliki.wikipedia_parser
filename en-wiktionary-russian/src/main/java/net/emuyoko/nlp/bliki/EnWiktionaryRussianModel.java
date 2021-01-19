@@ -28,8 +28,8 @@ public class EnWiktionaryRussianModel extends WikiModel {
     public EnWiktionaryRussianModel() {
         super(getConfiguration(),
                 Locale.ENGLISH,
-                "http://www.bliki.info/wiki/imageBase",
-                "http://www.bliki.info/wiki/linkBase");
+                "http://www.bliki.info/wiki/${image}",
+                "http://www.bliki.info/wiki/${title}");
     }
 
     public static Configuration getConfiguration() {
