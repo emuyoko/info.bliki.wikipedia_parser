@@ -1,0 +1,107 @@
+{{also|ѫже|оуже}}
+==Russian==
+
+===Etymology 1===
+From {{der|ru|sla-pro|*ju}} + {{m|sla-pro|*že}}.
+
+====Pronunciation====
+* {{audio|ru|Ru-{{PAGENAME}}.ogg|Audio}}
+* {{ru-IPA|уже́}}
+
+====Adverb====
+{{ru-adv|уже́}}
+
+# [[already]]
+#: {{uxi|ru|'''Уже́''' [[по́здно]].|It's '''already''' late.}}
+# not [[anymore]], no [[longer]] (in a negative sentence)
+#: {{uxi|ru|[[я]] '''уже́''' [[не]] [[мочь|могу́]] [[бежа́ть]]|I can't run any more}}
+
+====Particle====
+{{head|ru|particle|head=уже́}}
+
+# {{n-g|emphasises an amount or quantity of something}}
+#: {{uxi|ru|[[он|Он]] [[не]] [[спать|спал]] '''уже́''' [[второй|втору́ю]] [[ночь]].|It's the second he didn't sleep./He didn't sleep two nights in a row.}}
+# {{n-g|emphasises a certain word or collocation}}
+#: {{uxi|ru|'''Уже́''' [[по]] [[звук|зву́ку]] [[двигатель|дви́гателя]] [[мо́жно]] [[определи́ть]], [[что]] [[он]] [[неисправный|неиспра́вен]].|By the sound of the engine alone one can determine that it's faulty.}}
+
+====Derived terms====
+* {{l|ru|уже́ли}}, {{l|ru|уже́ль}}
+* {{l|ru|неуже́ли}}, {{l|ru|неуже́ль}}
+
+====Related terms====
+* {{l|ru|ужо́}}
+* {{l|ru|уж}}
+* {{l|ru|же}}
+
+===Etymology 2===
+From {{inh|ru|sla-pro|*ǫže}}.
+
+====Pronunciation====
+* {{ru-IPA|у́же|pos=com}}
+
+====Adverb====
+{{ru-comparative|у́же}}
+
+# {{comparative of|ru|POS=adjective|у́зкий}}
+#: {{uxi|ru|[[этот|Э́та]] [[у́лица]] '''у́же''', [[чем]] [[тот|та́]].|This street is '''narrower''' than that one.}}
+# {{comparative of|ru|POS=adverb|у́зко}}
+
+===Etymology 3===
+From {{inh|ru|sla-pro|*ǫži}} (ending taken from the hard paradigm).
+
+====Pronunciation====
+* {{audio|ru|Ru-{{PAGENAME}}.ogg|audio}}
+* {{ru-IPA|уже́}}
+
+====Noun====
+{{ru-noun form|уже́|m-an}}
+
+# {{inflection of|ru|уж||pre|s}}
+
+----
+
+==Serbo-Croatian==
+
+===Etymology===
+From {{inh|sh|sla-pro|*ǫže}}.
+
+===Noun===
+{{sh-noun|g=n|head=у̏же}}
+
+# [[rope]]
+# [[cord]]
+
+====Declension====
+{{sh-decl-noun|sc=Cyrl
+|уже|ужад
+|ужета|ужади
+|ужету|ужади
+|уже|ужад
+|уже|ужади
+|ужету|ужади
+|ужетом|ужади
+}}
+
+----
+
+==Ukrainian==
+
+===Alternative forms===
+* {{l|uk|вже}} {{qualifier|after vowels}}
+
+===Pronunciation===
+* {{uk-IPA|уже́}}
+* {{audio|uk|Uk-{{PAGENAME}}.ogg|Audio}}
+
+===Adverb===
+{{uk-adv|уже́|-}}
+
+# [[already]]
+
+====Usage notes====
+* {{U:uk:у-в|уже́}}
+
+===References===
+* {{R:uk:SUM-11}}
+* {{R:uk:Horokh}}
+* {{R:uk:Slovnyk}}

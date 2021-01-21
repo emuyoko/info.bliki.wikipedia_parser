@@ -1,0 +1,7 @@
+{{check deprecated lang param usage|lang={{{lang|}}}|<!--
+
+-->{{#invoke:form of/templates|inflection_of_t}}<!--
+
+-->}}<!--
+
+--><noinclude>{{documentation}}</noinclude>

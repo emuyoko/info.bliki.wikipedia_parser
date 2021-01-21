@@ -1,0 +1,13 @@
+{{R:Reference-meta
+|entry      = {{{entry|{{{1|{{PAGENAME}}}}}}}}
+|url        = {{#if:{{{url|}}}{{{2|}}}
+    | {{{url|{{{2|}}}}}}
+    | https://www.etymonline.com/word/{{urlencode:{{{entry|{{{1|{{PAGENAME}}}}}}}}|PATH}}
+  }}
+|author     = Douglas Harper
+|reference  = Online Etymology Dictionary
+|date       = 2001–{{CURRENTYEAR}}
+|accessdate = {{{accessdate|{{{3|}}}}}}
+|passage    = {{{passage|{{{4|}}}}}}
+|nodot      = {{{nodot|}}}
+}}<noinclude>{{documentation}}</noinclude>

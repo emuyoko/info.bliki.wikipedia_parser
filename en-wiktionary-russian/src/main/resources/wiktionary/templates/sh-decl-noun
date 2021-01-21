@@ -1,0 +1,37 @@
+<div class="NavFrame" style="{{#ifeq: {{{style|}}}|right|float:right; clear:right;|}}max-width:{{{width|30}}}em">
+<div class="NavHead" style="background:#eff7ff">{{#if:{{{title|}}}|{{{title}}}|Declension of {{m|sh||{{PAGENAME}}}}}}</div>
+<div class="NavContent">
+{| style="background:#F9F9F9;text-align:center; width: {{{width|30}}}em" class="inflection-table"
+|-
+! style="background:#d9ebff" | 
+! style="background:#d9ebff" | singular
+! style="background:#d9ebff" | plural
+|-
+| style="background: #eff7ff;" | '''nominative'''
+| {{#if:{{{ns|{{{1|}}}}}}|{{l-self|sh|{{{ns|{{{1}}}}}}}}|&mdash;}}
+| {{#ifeq:{{{pl|}}}|sg|&mdash;|{{#if:{{{np|{{{2|}}}}}}|{{l-self|sh|{{{np|{{{2}}}}}}}}|&mdash;}}}}
+|-
+| style="background: #eff7ff;" | '''genitive'''
+| {{#if:{{{gs|{{{3|}}}}}}|{{l-self|sh|{{{gs|{{{3}}}}}}}}|&mdash;}}
+| {{#ifeq:{{{pl|}}}|sg|&mdash;|{{#if:{{{gp|{{{4|}}}}}}|{{l-self|sh|{{{gp|{{{4}}}}}}}}|&mdash;}}}}
+|-
+| style="background: #eff7ff;" | '''dative'''
+| {{#if:{{{ds|{{{5|}}}}}}|{{l-self|sh|{{{ds|{{{5}}}}}}}}|&mdash;}}
+| {{#ifeq:{{{pl|}}}|sg|&mdash;|{{#if:{{{dp|{{{6|}}}}}}|{{l-self|sh|{{{dp|{{{6}}}}}}}}|&mdash;}}}}
+|-
+| style="background: #eff7ff;" | '''accusative'''
+| {{#if:{{{as|{{{7|}}}}}}|{{l-self|sh|{{{as|{{{7}}}}}}}}|&mdash;}}
+| {{#ifeq:{{{pl|}}}|sg|&mdash;|{{#if:{{{ap|{{{8|}}}}}}|{{l-self|sh|{{{ap|{{{8}}}}}}}}|&mdash;}}}}
+|-
+| style="background: #eff7ff;" | '''vocative'''
+| {{#if:{{{vs|{{{9|}}}}}}|{{l-self|sh|{{{vs|{{{9}}}}}}}}|&mdash;}}
+| {{#ifeq:{{{pl|}}}|sg|&mdash;|{{#if:{{{vp|{{{10|}}}}}}|{{l-self|sh|{{{vp|{{{10}}}}}}}}|&mdash;}}}}
+|-
+| style="background: #eff7ff;" | '''locative'''
+| {{#if:{{{ls|{{{11|}}}}}}|{{l-self|sh|{{{ls|{{{11}}}}}}}}|&mdash;}}
+| {{#ifeq:{{{pl|}}}|sg|&mdash;|{{#if:{{{lp|{{{12|}}}}}}|{{l-self|sh|{{{lp|{{{12}}}}}}}}|&mdash;}}}}
+|-
+| style="background: #eff7ff;" | '''instrumental'''
+| {{#if:{{{is|{{{13|}}}}}}|{{l-self|sh|{{{is|{{{13}}}}}}}}|&mdash;}}
+| {{#ifeq:{{{pl|}}}|sg|&mdash;|{{#if:{{{ip|{{{14|}}}}}}|{{l-self|sh|{{{ip|{{{14}}}}}}}}|&mdash;}}}}
+|}</div></div><noinclude>{{documentation}}</noinclude>

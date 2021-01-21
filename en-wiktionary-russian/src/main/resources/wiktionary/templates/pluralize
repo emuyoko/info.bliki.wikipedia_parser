@@ -1,0 +1,3 @@
+{{#invoke:string utilities|pluralize|{{{1}}}}}<!--
+
+--><noinclude>{{documentation}}</noinclude>

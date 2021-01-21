@@ -1,0 +1,7 @@
+{{check deprecated lang param usage|lang={{{lang|}}}|<!--
+
+-->{{#invoke:rhymes|show}}<!--
+
+-->}}<!--
+
+--><noinclude>{{documentation}}</noinclude>

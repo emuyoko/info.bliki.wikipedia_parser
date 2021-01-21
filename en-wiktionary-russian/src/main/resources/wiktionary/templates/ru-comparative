@@ -1,0 +1,7 @@
+{{#if:{{{noadv|}}}<!--
+-->|{{head|ru|comparative adjective|head={{{1|}}}|tr={{{tr|}}}}}<!--
+-->|{{#if:{{{noadj|}}}<!--
+   -->|{{head|ru|comparative adverb|head={{{1|}}}|tr={{{tr|}}}}}<!--
+   -->|{{head|ru|comparative adjective|head={{{1|}}}|tr={{{tr|}}}|cat2=comparative adverbs}}<!--
+ -->}}<!--
+-->}}<noinclude>{{documentation}}</noinclude>

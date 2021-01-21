@@ -1,0 +1,20 @@
+{{check deprecated lang param usage|lang={{{lang|}}}|<!--
+
+-->{{#invoke:form of/templates|form_of_t|[[Appendix:Glossary#comparative|comparative degree]] of<!--
+  
+  add to "Category:LANG comparative adjectives" unless POS= or p= is given to override the part of speech
+
+  -->|cat=comparative {{pluralize|{{#invoke:form of/templates|normalize_pos|{{#if:{{{p|}}}|{{{p|}}}|{{#if:{{{POS|}}}|{{{POS|}}}|adjective}}}}}}}}<!--
+
+  -->|ignore=POS,p<!--
+
+-->}}<!--
+
+-->}}<!--
+
+--><includeonly><!--
+-->{{#if:{{{nocat|}}}|[[Category:comparative of/nocat]]|[[Category:comparative of/without nocat]]}}<!--
+-->{{#ifeq:{{#if:{{{lang|}}}|{{{lang}}}|{{{1|}}}}}|en|[[Category:Comparative of lang=en]]}}<!--
+--></includeonly><!--
+
+--><noinclude>{{documentation}}</noinclude>

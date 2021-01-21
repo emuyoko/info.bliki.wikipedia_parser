@@ -1,0 +1,51 @@
+“{{#ifeq:{{{url}}}|none
+  | {{{entry}}}
+  | [{{{url}}} {{{entry}}}]
+}}” {{#if:{{{in|}}}|{{{in}}}|in}}{{#if:{{{source|}}}
+  | &#32;{{{source}}}; reproduced {{#if:{{{on|}}}|{{{on}}}|on}}
+}}{{#if:{{{author|}}}
+  | &#32;{{{author}}}{{#if:{{{editor|}}}{{{editors|}}}|<nowiki>;</nowiki>|,}}&#32;
+}}{{#if:{{{editor|}}}
+  | &#32;{{{editor}}}, editor,
+  | {{#if:{{{editors|}}}
+      | &#32;{{{editors}}}, editors,
+    }}
+}} <cite>{{#invoke:italics|unitalicize_brackets|{{{reference}}}}}</cite>{{#if:{{{trans-reference|}}}
+  | &#32;[''{{{trans-reference}}}'']
+}}{{#if:{{{reference-url|}}}
+  |<sup>[{{{reference-url}}}]</sup>
+}}{{#if:{{{volume|}}}
+  |, volume {{{volume}}}
+}}{{#if:{{{edition|}}}
+  |, {{{edition}}} edition
+}}{{#if:{{{location|}}}
+  |, {{{location}}}
+}}{{#if:{{{publisher|}}}
+  | {{#if:{{{location|}}}|<nowiki>:</nowiki>|,}} {{{publisher}}}
+}}{{#if:{{{date|}}}
+  |, {{{date}}}
+}}{{#if:{{{isbn|}}}
+  |, <small>{{ISBN|{{{isbn}}}}}</small>
+}}{{#if:{{{oclc|}}}
+  |, <small>{{OCLC|{{{oclc}}}}}</small>
+}}{{#if:{{{accessdate|}}}
+  |, retrieved {{#formatdate:{{{accessdate}}}}}
+}}{{#if:{{{page|}}}
+  |, {{#if:{{{pageurl|}}}
+       | [{{{pageurl}}} page {{{page}}}]
+       | page {{{page}}}
+     }}
+  | {{#if:{{{pages|}}}
+      |, {{#if:{{{pageurl|}}}
+           | [{{{pageurl}}} pages {{{pages}}}]
+           | pages {{{pages}}}
+         }}
+    }}
+}}{{#if:{{{column|}}}
+  |, column {{{column}}}
+  | {{#if:{{{columns|}}}
+      |, columns {{{columns}}}
+    }}
+}}{{#if:{{{passage|}}}
+  |<nowiki>:</nowiki> “{{{passage}}}”
+}}{{#if:{{{nodot|}}}||.}}<noinclude>{{documentation}}</noinclude>
